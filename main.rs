@@ -28,13 +28,18 @@ fn main() {
 
     println!("Insert temperature");
 
-    let mut temperature = String::new();
+    let temperature:f64 = loop {
+        let mut temperature = String::new();
 
-    io::stdin()
-        .read_line(&mut temperature)
-        .expect("Failed to read line");
-        
-    let temperature: f64 = temperature.trim().parse().expect("Not a valid number");
+        io::stdin()
+            .read_line(&mut temperature)
+            .expect("Failed to read line");
+
+        match temperature.trim().parse() {
+            Ok(temperature) => break temperature,
+            Err(_) => println!("Please, insert a valid temperature"),
+        };
+    };
 
     if scale == "F" {
         let result = 5 as f64 / 9 as f64 *(temperature - 32 as f64);
