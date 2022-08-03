@@ -8,7 +8,7 @@ This is my first Rust project :)
 
 ## Understanding the tool 👨‍💻
 
-After downloading the main file, you can type `cargo run` in your terminal.It will run the code and ask for the user's inputs.
+After downloading the main file, you can type `cargo run` in your terminal. It will run the code and ask for the user's inputs.
 
 The first input must be the letter `F` if you want to convert from Fahrenheit to Celsius or the letter `C` if you want to convert from Celsius to Fahrenheit. Any other letter will not trigger the next step, lowercase C or F will lead to the next step as well.
 
